@@ -31,7 +31,9 @@ gem 'high_voltage'
 gem 'jquery-rails'
 gem 'pg'
 gem 'pundit'
-gem 'therubyracer', :platform=>:ruby
+gem 'mini_racer', :platform=>:ruby
+gem 'dotenv-rails', groups: [:development, :test]
+
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
@@ -45,7 +47,7 @@ group :development do
   gem 'spring-commands-rspec'
 end
 group :development, :test do
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '4.11.1'
   gem 'faker'
   gem 'rspec-rails'
 end
