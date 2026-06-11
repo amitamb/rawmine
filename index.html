@@ -16,6 +16,10 @@
   <meta name="twitter:title" content="RawMine | Software Engineering" />
   <meta name="twitter:description" content="RawMine builds and maintains production web applications." />
   <meta name="twitter:image" content="https://rawmine.in/assets/og.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-180.png" />
   <style>
     :root{
       --bg:#ffffff; --ink:#111418; --muted:#5b6470; --line:#e7e9ee;
@@ -43,8 +47,9 @@
     .card{background:var(--bg); padding:22px}
     .card h3{margin:0 0 6px; font-size:1.05rem; letter-spacing:-.01em}
     .card p{margin:0; color:var(--muted); font-size:.95rem}
-    footer{border-top:1px solid var(--line); padding:26px 0 52px}
+    footer{border-top:1px solid var(--line); margin-top:8px; padding:36px 0 64px}
     .frow{display:flex; flex-wrap:wrap; gap:14px 28px; align-items:center; justify-content:space-between}
+    .copy{margin-top:24px; padding-top:20px; border-top:1px solid var(--line)}
     .links a{color:var(--accent); text-decoration:none; font-weight:600; font-size:.9rem}
     .links a:hover{text-decoration:underline}
     @media(max-width:560px){.grid{grid-template-columns:1fr}}
@@ -94,7 +99,7 @@
         <a href="https://github.com/amitamb" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
-    <p class="meta" style="margin-top:16px">© <span id="y"></span> RawMine · rawmine.in</p>
+    <p class="meta copy">© <span id="y"></span> RawMine · rawmine.in</p>
   </footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>

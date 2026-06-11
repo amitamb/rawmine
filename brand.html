@@ -12,6 +12,10 @@
   <meta property="og:image" content="https://rawmine.in/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://rawmine.in/assets/og.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-180.png" />
   <style>
     :root{
       --bg:#ffffff; --ink:#111418; --muted:#5b6470; --line:#e7e9ee;
@@ -91,13 +95,20 @@
     .ainfo{padding:12px 14px; display:flex; flex-direction:column; gap:2px}
     .aname{font-weight:700; font-size:.92rem}
     .adim{font-size:.8rem; color:var(--muted); font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    /* Logo files */
+    .logos{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .logo-card{border:1px solid var(--line); border-radius:12px; overflow:hidden; text-decoration:none; color:inherit; background:var(--bg)}
+    .logo-prev{height:132px; display:flex; align-items:center; justify-content:center; padding:20px; border-bottom:1px solid var(--line)}
+    .logo-prev img{max-width:100%; max-height:100%}
+    .logo-prev.dark{background:#0f1115} .logo-prev.lite{background:#fff}
+    @media(max-width:620px){.logos{grid-template-columns:1fr}}
 
     /* Tokens */
     .tokens{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:12px; overflow:hidden}
     .tokens div{background:var(--bg); padding:14px 18px; font-size:.9rem}
     .tokens .k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--ink2)}
 
-    footer{border-top:1px solid var(--line); padding:26px 0 52px}
+    footer{border-top:1px solid var(--line); margin-top:8px; padding:36px 0 64px}
     .frow{display:flex; flex-wrap:wrap; gap:14px 28px; align-items:center; justify-content:space-between}
 
     @media(max-width:620px){
@@ -119,6 +130,10 @@
     <div class="hero">
       <h1>Brand &amp; Media Kit</h1>
       <p>The visual system behind RawMine: wordmark, colors, type, and components. Use these tokens for any RawMine material.</p>
+      <div class="btnrow" style="margin-top:26px">
+        <a class="btn" href="/assets/rawmine-media-kit.zip" download>Download all assets (.zip)</a>
+        <a class="lnk" href="/">Back to site</a>
+      </div>
     </div>
 
     <!-- WORDMARK -->
@@ -212,6 +227,26 @@
       <div class="btnrow">
         <a href="#" class="btn">Primary button</a>
         <a href="#" class="lnk">Text link ↗</a>
+      </div>
+    </section>
+
+    <!-- LOGO FILES -->
+    <section>
+      <h2>Logo &amp; app icons</h2>
+      <p class="lead">The RM monogram for square avatars and app icons (Facebook, LinkedIn, X, favicons), and the horizontal wordmark on a transparent background for navbars and headers. SVG scales cleanly to any size; PNGs are included for platforms that need raster.</p>
+      <div class="logos">
+        <a class="logo-card" href="/assets/logo-512.png" target="_blank" rel="noopener">
+          <div class="logo-prev dark"><img src="/assets/logo-192.png" alt="RawMine RM monogram" loading="lazy" /></div>
+          <div class="ainfo"><span class="aname">RM monogram</span><span class="adim">Avatar / app icon · 1024–16px + favicon.ico</span></div>
+        </a>
+        <a class="logo-card" href="/assets/logo-wordmark-dark.svg" target="_blank" rel="noopener">
+          <div class="logo-prev lite"><img src="/assets/logo-wordmark-dark.svg" alt="RawMine wordmark, dark" loading="lazy" /></div>
+          <div class="ainfo"><span class="aname">Wordmark · dark text</span><span class="adim">For light backgrounds · SVG + PNG</span></div>
+        </a>
+        <a class="logo-card" href="/assets/logo-wordmark-light.svg" target="_blank" rel="noopener">
+          <div class="logo-prev dark"><img src="/assets/logo-wordmark-light.svg" alt="RawMine wordmark, light" loading="lazy" /></div>
+          <div class="ainfo"><span class="aname">Wordmark · light text</span><span class="adim">For dark backgrounds · SVG + PNG</span></div>
+        </a>
       </div>
     </section>
 
