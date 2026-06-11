@@ -3,8 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RawMine — Brand & Media Kit</title>
+  <title>RawMine | Brand & Media Kit</title>
   <meta name="description" content="RawMine brand guidelines: wordmark, colors, typography, and UI components." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rawmine.in/brand.html" />
+  <meta property="og:title" content="RawMine | Brand & Media Kit" />
+  <meta property="og:description" content="Wordmark, colors, typography, components, and downloadable social assets." />
+  <meta property="og:image" content="https://rawmine.in/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://rawmine.in/assets/og.png" />
   <style>
     :root{
       --bg:#ffffff; --ink:#111418; --muted:#5b6470; --line:#e7e9ee;
@@ -77,6 +84,14 @@
     .lnk:hover{text-decoration:underline}
     .btn{display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; font-size:.92rem; padding:9px 16px; border-radius:8px}
 
+    /* Social assets */
+    .assets{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+    .asset{display:block; border:1px solid var(--line); border-radius:12px; overflow:hidden; text-decoration:none; color:inherit; background:var(--bg)}
+    .asset img{display:block; width:100%; height:auto; border-bottom:1px solid var(--line); background:#0f1115}
+    .ainfo{padding:12px 14px; display:flex; flex-direction:column; gap:2px}
+    .aname{font-weight:700; font-size:.92rem}
+    .adim{font-size:.8rem; color:var(--muted); font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
     /* Tokens */
     .tokens{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:12px; overflow:hidden}
     .tokens div{background:var(--bg); padding:14px 18px; font-size:.9rem}
@@ -103,7 +118,7 @@
   <main class="wrap">
     <div class="hero">
       <h1>Brand &amp; Media Kit</h1>
-      <p>The visual system behind RawMine — wordmark, colors, type, and components. Use these tokens for any RawMine material.</p>
+      <p>The visual system behind RawMine: wordmark, colors, type, and components. Use these tokens for any RawMine material.</p>
     </div>
 
     <!-- WORDMARK -->
@@ -139,7 +154,7 @@
     <!-- COLORS -->
     <section>
       <h2>Color</h2>
-      <p class="lead">A near-black ink on white, one teal accent, and quiet greys for structure. The accent carries all emphasis — use it sparingly.</p>
+      <p class="lead">A near-black ink on white, one teal accent, and quiet greys for structure. The accent carries all emphasis, so use it sparingly.</p>
       <div class="swatches">
         <div class="sw">
           <div class="chip" style="background:#0f766e"></div>
@@ -171,7 +186,7 @@
     <!-- TYPE -->
     <section>
       <h2>Typography</h2>
-      <p class="lead">The native system UI stack — fast, familiar, no web-font load. Headings are tight (−0.03em); labels are uppercase with wide tracking.</p>
+      <p class="lead">The native system UI stack: fast, familiar, no web-font load. Headings are tight (-0.03em); labels are uppercase with wide tracking.</p>
       <div class="spec">
         <div class="row"><span class="label">Display / H1</span><span class="t-h1">Software engineering</span></div>
         <div class="row"><span class="label">Card / H3</span><span class="t-h3">Backend &amp; Rails engineering</span></div>
@@ -200,6 +215,26 @@
       </div>
     </section>
 
+    <!-- SOCIAL ASSETS -->
+    <section>
+      <h2>Social assets</h2>
+      <p class="lead">Ready-to-post images at standard sizes. Click to open full-size, then save. The link-preview image is also embedded site-wide, so shares on Slack, LinkedIn, and WhatsApp unfurl automatically.</p>
+      <div class="assets">
+        <a class="asset" href="/assets/og.png" target="_blank" rel="noopener">
+          <img src="/assets/og.png" alt="RawMine link preview image" loading="lazy" />
+          <div class="ainfo"><span class="aname">Link preview (Open Graph)</span><span class="adim">1200 × 630 · og.png</span></div>
+        </a>
+        <a class="asset" href="/assets/square.png" target="_blank" rel="noopener">
+          <img src="/assets/square.png" alt="RawMine square profile image" loading="lazy" />
+          <div class="ainfo"><span class="aname">Square / profile</span><span class="adim">1080 × 1080 · square.png</span></div>
+        </a>
+        <a class="asset" href="/assets/banner.png" target="_blank" rel="noopener">
+          <img src="/assets/banner.png" alt="RawMine cover banner" loading="lazy" />
+          <div class="ainfo"><span class="aname">Cover banner (LinkedIn)</span><span class="adim">1584 × 396 · banner.png</span></div>
+        </a>
+      </div>
+    </section>
+
     <!-- TOKENS -->
     <section>
       <h2>Layout tokens</h2>
@@ -215,7 +250,7 @@
 
   <footer class="wrap">
     <div class="frow">
-      <div class="meta">RawMine — Brand &amp; Media Kit</div>
+      <div class="meta">RawMine Brand &amp; Media Kit</div>
       <div class="meta">rawmine.in/brand</div>
     </div>
   </footer>
