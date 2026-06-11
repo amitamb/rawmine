@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rawmine — Software Engineering</title>
+  <meta name="description" content="Rawmine is a software engineering firm building reliable, long-term production software for product teams." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#111418; --muted:#5b6470; --line:#e7e9ee;
+      --accent:#0f766e; --soft:#f6f8f9;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      background:var(--bg); color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.55; -webkit-font-smoothing:antialiased;
+    }
+    .wrap{max-width:880px; margin:0 auto; padding:0 24px}
+    header{border-bottom:1px solid var(--line)}
+    .bar{display:flex; align-items:center; justify-content:space-between; padding:20px 0}
+    .brand{font-weight:800; letter-spacing:-.02em; font-size:1.15rem}
+    .brand b{color:var(--accent)}
+    .meta{font-size:.8rem; color:var(--muted)}
+    .hero{padding:72px 0 56px}
+    .hero h1{font-size:clamp(1.9rem,5vw,3rem); line-height:1.1; letter-spacing:-.03em; margin:0 0 16px; max-width:18ch}
+    .hero p{font-size:clamp(1.05rem,2.2vw,1.25rem); color:var(--muted); margin:0; max-width:54ch}
+    section{padding:40px 0; border-top:1px solid var(--line)}
+    h2{font-size:.8rem; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:0 0 24px}
+    .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:12px; overflow:hidden}
+    .card{background:var(--bg); padding:22px}
+    .card h3{margin:0 0 6px; font-size:1.05rem; letter-spacing:-.01em}
+    .card p{margin:0; color:var(--muted); font-size:.95rem}
+    .about p{max-width:62ch; color:#3a414b; margin:0}
+    footer{border-top:1px solid var(--line); padding:28px 0 56px}
+    .frow{display:flex; flex-wrap:wrap; gap:14px 28px; align-items:center; justify-content:space-between}
+    .tags{display:flex; flex-wrap:wrap; gap:8px}
+    .tag{font-size:.78rem; color:var(--muted); background:var(--soft); border:1px solid var(--line); padding:5px 10px; border-radius:999px}
+    .links a{color:var(--accent); text-decoration:none; font-weight:600; font-size:.9rem}
+    .links a:hover{text-decoration:underline}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <div class="brand">raw<b>mine</b></div>
+      <div class="meta">Software Engineering · India</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1>Reliable software, built for the long run.</h1>
+      <p>Rawmine is a software engineering firm that designs, builds, and maintains production web applications for product teams.</p>
+    </div>
+
+    <section class="about">
+      <h2>About</h2>
+      <p>Rawmine is a GST-registered software engineering practice based in India. We work as a long-term engineering partner — taking ownership of production systems and shipping dependable software that holds up under real-world load. The focus is steady, maintainable delivery over the long term, not one-off projects.</p>
+    </section>
+
+    <section>
+      <h2>What we do</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Backend &amp; Rails engineering</h3>
+          <p>Ruby on Rails, API design, and multi-tenant SaaS architecture.</p>
+        </div>
+        <div class="card">
+          <h3>Performance &amp; reliability</h3>
+          <p>Profiling, query optimization, observability, and scaling.</p>
+        </div>
+        <div class="card">
+          <h3>Full-stack web development</h3>
+          <p>End-to-end feature delivery across frontend and backend.</p>
+        </div>
+        <div class="card">
+          <h3>Long-term contracting</h3>
+          <p>Embedded engineering capacity for product and platform teams.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="frow">
+      <div class="tags">
+        <span class="tag">GST-registered business</span>
+        <span class="tag">Based in India</span>
+        <span class="tag">Long-term production software</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/amitamb" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+    <p class="meta" style="margin-top:18px">© <span id="y"></span> Rawmine · rawmine.in</p>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
